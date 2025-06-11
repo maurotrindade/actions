@@ -1,1 +1,15 @@
 # hello-actions
+
+## hello
+
+```yaml
+name: hello-actions
+on: push
+
+jobs:
+  hello-action-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello-step
+        run: echo "Hello GitHubActions!"
+```
