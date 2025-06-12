@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref_type == 'branch' # referente à criação de uma branch e não de uma tag.
     steps:
-      - name: Exibir nome da nova branch
-        run: echo "Nova branch criada: ${{ github.ref }}"
+      # - name: Exibir nome da nova branch
+      #   run: echo "Nova branch criada:" ${{ github.ref }}
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
