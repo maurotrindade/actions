@@ -13,3 +13,17 @@ jobs:
       - name: hello-step
         run: echo "Hello GitHubActions!"
 ```
+
+sintaxe básica:
+
+```txt
+name: um-nome-opcional
+
+on: event  # trigger
+
+jobs:
+  nome-do-job
+  ...
+```
+
+[github-event-types](https://docs.github.com/en/rest/using-the-rest-api/github-event-types)
