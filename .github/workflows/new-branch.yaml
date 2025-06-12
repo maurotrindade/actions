@@ -1,9 +1,7 @@
 name: Run on New Branch
 
 on:
-  create:
-    branches:
-      - '**'
+  create
 
 jobs:
   new-branch-job:
