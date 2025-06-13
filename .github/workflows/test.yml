@@ -14,8 +14,6 @@ jobs:
         # https://github.com/actions/checkout
         # https://github.com/marketplace/actions/checkout
         uses: actions/checkout@v4
-        with:
-          repository: "if-not-the-same"
       # - name: Install Node
       #   uses: actions/setup-node
       #   with:
