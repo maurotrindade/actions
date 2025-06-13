@@ -1,0 +1,20 @@
+name: Test Node Project
+
+on:
+  push:
+    branches: ['**']
+
+jobs:
+  tests:
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-latest # já vem com Node, Python, Ruby, Julia
+    steps:
+      # não roda no repo, tenho que baixar a branch:
+      - name: Get my stuff
+        # https://github.com/actions/checkout
+        # https://github.com/marketplace/actions/checkout
+        uses: actions/checkout@v4
+        with:
+          repository: "if-not-the-same"
+      - name: install
+        run: node --version

@@ -9,4 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: hello-step
-        run: cat /etc/*-release
+        run: |
+          cat /etc/*-release
+          node --version
+          ruby --version
