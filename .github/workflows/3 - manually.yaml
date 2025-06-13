@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   job-name:
-    runs-on: debian
+    runs-on: ubuntu-latest
     steps:
       - name: hello-step
         run: cat ""
