@@ -1,0 +1,10 @@
+name: I can be mannualy triggered
+
+on: workflow_dispatch
+
+jobs:
+  job-name:
+    runs-on: debian
+    steps:
+      - name: hello-step
+        run: cat ""
