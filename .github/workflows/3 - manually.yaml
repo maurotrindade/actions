@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: hello-step
-        run: cat ""
+        run: echo "Hello there!"
