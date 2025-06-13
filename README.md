@@ -11,10 +11,10 @@ automactic ACTIONS are executed in response
 
 ## resources
 
-[starter-workflows](https://github.com/actions/starter-workflows)
-[github-actions-course-resources](https://github.com/academind/github-actions-course-resources/tree/main/Code)
+- [starter-workflows](https://github.com/actions/starter-workflows)
+- [github-actions-course-resources](https://github.com/academind/github-actions-course-resources/tree/main/Code)
 
-[events-that-trigger-workflows](https://docs.github.com/pt/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
+- [events-that-trigger-workflows](https://docs.github.com/pt/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
 
 ## hello
 

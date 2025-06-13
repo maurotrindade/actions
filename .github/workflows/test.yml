@@ -1,4 +1,4 @@
-name: Test Node Project
+name: Deploy Node Project
 
 on:
   push:
@@ -18,7 +18,17 @@ jobs:
       #   uses: actions/setup-node
       #   with:
       #     node-vesion: 24
-      - name: install
+      - name: Install
         run: npm ci  # use only .lock
-      - name: run tests
+      - name: Run tests
         run: npm t
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get my stuff
+        uses: actions/checkout@v4
+      - name: Build application
+        run: npm run build
+      - name: Deploy
+        run: echo "'I'm deployed baby!"
+
