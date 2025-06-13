@@ -1,0 +1,21 @@
+name: Deploy Node Project
+
+on: workflow_dispatch
+
+jobs:
+  job-a-parallel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello-step
+        run: echo "From job A!"
+  job-b-parallel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello-step
+        run: echo "From job B!"
+  job-c-sequential:
+    needs: job-b-parallel  # depende só de b
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello-step
+        run: echo "From job C!"
