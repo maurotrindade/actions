@@ -28,7 +28,9 @@ jobs:
       - name: Get my stuff
         uses: actions/checkout@v4
       - name: Build application
-        run: npm run build
+        run: |
+          npm ci
+          npm run build
       - name: Deploy
         run: echo "'I'm deployed baby!"
 
