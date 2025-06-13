@@ -6,9 +6,14 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-      - name: Output GitHub ctx
+      - name: Expressions
         # "${{ expressions }}"
         # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions
+        run: |
+          echo "true == true: {{ true == true }}"
+          echo "null: {{ null }}"
+          echo "25 > 2: {{ 25 > 2 }}"
+      - name: Output GitHub ctx
         # "contexts": github, env, vars...
         # https://docs.github.com/en/enterprise-cloud@latest/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs
         run: echo "${{ toJSON(github) }}"  # expression + context + function
