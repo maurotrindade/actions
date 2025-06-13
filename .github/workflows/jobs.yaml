@@ -1,4 +1,4 @@
-name: Deploy Node Project
+name: Parallel x Sequential
 
 on: workflow_dispatch
 
