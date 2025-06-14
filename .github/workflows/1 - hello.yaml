@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: hello-step
         run: |
-          cat /etc/*-release
-          node --version
-          ruby --version
+          cat /etc/*-release && echo "\n"
+          echo "Node: " && node --version
+          echo "Ruby: " && ruby --version
+          echo "\n"
+          echo "::warning::Esta é uma mensagem de aviso"
+          echo "::error::Esta é uma mensagem de erro"
