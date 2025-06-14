@@ -13,6 +13,10 @@ jobs:
           echo "true == true: ${{ true == true }}"
           echo "null: ${{ null }}"
           echo "25 > 2: ${{ 25 > 2 }}"
+      - name: Functions
+        run: |
+          echo "contains: ${{ contains('Hello world', 'llo') }}"
+          echo "forma: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}"
       - name: Output GitHub ctx
         # "contexts": github, env, vars...
         # https://docs.github.com/en/enterprise-cloud@latest/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs
