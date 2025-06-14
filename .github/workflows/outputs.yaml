@@ -2,17 +2,19 @@ name: Outputs
 
 on:
   push:
-    branches: [main]
+    branches: workflow_dispatch
 
 jobs:
   hello-action-job:
     runs-on: ubuntu-latest
     steps:
       - name: hello-step
+        # echo "::notice file={"name"},title={"title"}::Hello there!"
         run: |
-          echo "::notice file={"name"},title={"title"}::Hello there!"
+          echo "::group::My Group"
           echo "::debug::Está é uma mesnsagem de debug"
           echo "::warning::Esta é uma mensagem de aviso"
           echo "::error::Esta é uma mensagem de erro"
+          echo "::endgroup::"
 
 
