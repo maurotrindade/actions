@@ -1,8 +1,6 @@
 name: Outputs
 
-on:
-  push:
-    branches: workflow_dispatch
+on: workflow_dispatch
 
 jobs:
   hello-action-job:
