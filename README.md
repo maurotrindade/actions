@@ -1,13 +1,13 @@
 # GitHub Actions
 
-a **workflow** automation service
-automate **all kinds** of repository-related processes
-CI/CD is no of many possible workflows
+- **workflow** automation service;
+- automate **all kinds** of repository-related processes;
+- CI/CD is no of many possible workflows
 
 ## workflows
 
-when something happens IN or TO yout repository (Events)
-automactic ACTIONS are executed in response
+- when something happens IN or TO yout repository (Events);
+- automactic ACTIONS are executed in response
 
 ## resources
 
@@ -30,42 +30,6 @@ jobs:
         run: echo "Hello GitHubActions!"
 ```
 
-## sintaxe básica:
+[conceitos básicos](docs/1%20-%20conceitos%20básicos)
 
-```yaml
-name: um-nome-opcional
-
-on: event  # event
-
-jobs:
-  nome-do-job:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: step-name
-        run: echo "a shell script or action"
-      - name: step-name
-        run: echo "are executed in order!"
-```
-
-
-## Action:
-- a "custom command";
-- an application that performs a task (more complex than a command)
-
-![run x use](assets/actions.png)
-
-exemplo de repo [/actions/checkout](https://github.com/actions/checkout)
-
-existe um [marketplace](https://github.com/marketplace/actions/checkout)
-
-
-```yaml
-steps:
-  # não roda no repo, tenho que baixar a branch:
-  - name: Get my stuff
-    # https://github.com/actions/checkout
-    # https://github.com/marketplace/actions/checkout
-    uses: actions/checkout@v4
-    with: # para passar parâmetros para o use
-      repository: "if-not-the-same" # nesse caso é opcional
-```
+[actions](docs/2%20-%20actions.md)

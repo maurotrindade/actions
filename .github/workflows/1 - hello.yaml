@@ -1,14 +1,15 @@
-name: hello-actions
+name: Hello Actions
 
 on:
   push:
-    branches: [main]
+    branches: ['hello/*']
 
 jobs:
   hello-action-job:
     runs-on: ubuntu-latest
     steps:
       - name: hello-step
+        # já vem com diversas linguagens instaladas
         run: |
           cat /etc/*-release && echo "\n"
           echo "Node: " && node --version
