@@ -4,3 +4,10 @@ on:
   # PRs vindos de forks não vão rodar por padrão pedindo antes uma aprovação
   pull_request:
     branches: [main]
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello-step
+        run: echo "Hello"
