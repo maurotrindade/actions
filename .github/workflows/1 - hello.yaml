@@ -22,14 +22,14 @@ jobs:
         run: |
           Write-Host "Versão do Windows:"
           Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion, OsArchitecture
-          echo "Node: " && node --version
-          echo "Ruby: " && ruby --version
+          echo "Node: "; node --version
+          echo "Ruby: "; ruby --version
   hello-action-macos:
     runs-on: macos-latest
     steps:
       - name: hello-step
         # já vem com diversas linguagens instaladas
         run: |
-          cat /etc/*-release && echo "\n"
+          sw_vers
           echo "Node: " && node --version
           echo "Ruby: " && ruby --version
