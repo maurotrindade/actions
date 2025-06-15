@@ -5,8 +5,27 @@ on:
     branches: ['hello/*']
 
 jobs:
-  hello-action-job:
+  hello-action-ubuntu:
     runs-on: ubuntu-latest
+    steps:
+      - name: hello-step
+        # já vem com diversas linguagens instaladas
+        run: |
+          cat /etc/*-release && echo "\n"
+          echo "Node: " && node --version
+          echo "Ruby: " && ruby --version
+  hello-action-windows:
+    runs-on: windows-latest
+    steps:
+      - name: hello-step
+        # já vem com diversas linguagens instaladas
+        run: |
+          Write-Host "Versão do Windows:"
+          Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion, OsArchitecture
+          echo "Node: " && node --version
+          echo "Ruby: " && ruby --version
+    hello-action-macos:
+    runs-on: macos-latest
     steps:
       - name: hello-step
         # já vem com diversas linguagens instaladas
