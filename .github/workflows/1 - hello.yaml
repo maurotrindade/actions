@@ -24,7 +24,7 @@ jobs:
           Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion, OsArchitecture
           echo "Node: " && node --version
           echo "Ruby: " && ruby --version
-    hello-action-macos:
+  hello-action-macos:
     runs-on: macos-latest
     steps:
       - name: hello-step
