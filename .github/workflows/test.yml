@@ -22,7 +22,7 @@ jobs:
         run: npm ci  # use only .lock
       - name: Run tests
         run: npm t
-  deploy:
+  build:
     needs: tests
     runs-on: ubuntu-latest
     steps:
@@ -32,6 +32,16 @@ jobs:
         run: |
           npm ci
           npm run build
+      - name: Upload Artifacts
+        uses: actions/upload-artifacts@v4
+          with:
+            name: my-artifact
+            path: |
+              dist
+              package.json
+  deploy:
+    needs: tests
+    runs-on: ubuntu-latest
       - name: Deploy
         run: echo "'I'm deployed baby!"
 
