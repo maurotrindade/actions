@@ -40,8 +40,9 @@ jobs:
             dist
             package.json
   deploy:
-    needs: tests
+    needs: build
     runs-on: ubuntu-latest
-      - name: Deploy
-        run: echo "'I'm deployed baby!"
+      steps:
+        - name: Deploy
+          run: echo "'I'm deployed baby!"
 
