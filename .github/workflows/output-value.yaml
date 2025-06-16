@@ -1,0 +1,20 @@
+name: Output Values
+
+on: workflow_dispatch
+
+jobs:
+  create-output-value:
+    runs-on: ubuntu-latest
+    outputs:  # here
+      my-output-values: ${{ steps.publisher.outputs.my-value }} # setando para o job
+    steps:
+      - name: Create step value
+        id: publisher
+        run: echo "my-value=$RANDOM" >> $GITHUB_OUTPUT # setando para o step
+        # ::set-output:: está depreciado
+  use-output-value:
+    needs: create-output-value
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get output valuemy-output-values
+        run: echo "{{ needs.create-output-value.outputs.my-output-values }}"
