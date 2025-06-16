@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get output valuemy-output-values
-        run: echo "{{ needs.create-output-value.outputs.my-output-values }}"
+        run: echo "${{ needs.create-output-value.outputs.my-output-values }}"
