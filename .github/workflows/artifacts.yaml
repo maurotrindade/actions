@@ -1,0 +1,36 @@
+name: Artifacts
+
+on:
+  push:
+    branches: workflow_dispatch
+
+jobs:
+  create-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create ls file
+        run: ls -lah > ls
+      - name: Create create release file
+        run: |
+            makedir dir
+            cat /etc/*-release > dir/release
+      - name: Upload Artifacts
+        # vai criar um link de download (vou usar o artifacts do hub como área de transfência)
+        ## /actions/actions/runs/15680483301/artifacts/3335669167
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: |
+            ls
+            dir
+  use-file:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get artifacts
+        uses: actions/download-artifact@v4
+        with:
+          # mesmo nome que usei no create:
+          name: my-artifact
+      - name: list
+        run: ls -la
