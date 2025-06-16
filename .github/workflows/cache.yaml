@@ -25,4 +25,4 @@ jobs:
           path: ~/.npm
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Cow say
-          run: npx cowsay Moo!
+        run: npx cowsay Moo!
