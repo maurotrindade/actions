@@ -2,8 +2,8 @@
 
 ## Workflows
 
-fica em um dado repositório onde é disparados por eventos
-Contem um ou mais `jobs`
+fica em um dado repositório onde é disparado por eventos
+contêm um ou mais `jobs`
 
 ## Jobs
 
