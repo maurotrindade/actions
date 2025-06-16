@@ -18,6 +18,11 @@ jobs:
       #   uses: actions/setup-node
       #   with:
       #     node-vesion: 24
+      - name: Cache Dependencies
+        uses: actions/cache@v4
+          with:
+            path: ~/.npm
+            key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install
         run: npm ci  # use only .lock
       - name: Run tests
@@ -28,6 +33,11 @@ jobs:
     steps:
       - name: Get my stuff
         uses: actions/checkout@v4
+      - name: Cache Dependencies
+        uses: actions/cache@v4
+          with:
+            path: ~/.npm
+            key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Build application
         run: |
           npm ci

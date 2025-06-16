@@ -1,0 +1,22 @@
+name: Cache
+
+on: workflow_dispatch
+
+jobs:
+  install:
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-latest # já vem com Node, Python, Ruby, Julia
+    steps:
+      - name: Cache Dependencies
+        uses: actions/cache@v4
+          with:
+            path: ~/.npm
+            key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install
+        run: npm install -D cowsay
+  use:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cow say
+        run: npx cowsay Moo!
