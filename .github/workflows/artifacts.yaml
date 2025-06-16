@@ -31,4 +31,4 @@ jobs:
           # mesmo nome que usei no create:
           name: my-artifact
       - name: list
-        run: ls -la
+        run: cat ls && ls dir
