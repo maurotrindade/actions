@@ -42,7 +42,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-      steps:
-        - name: Deploy
-          run: echo "'I'm deployed baby!"
+    steps:
+      - name: Deploy
+        run: echo "'I'm deployed baby!"
 
