@@ -11,7 +11,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+          key: node-modules-2
       - name: Install
         run: npm install -D cowsay
   use:
@@ -23,6 +23,6 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+          key: node-modules-2
       - name: Cow say
         run: npx cowsay Moo!
