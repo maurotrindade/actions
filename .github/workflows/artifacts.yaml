@@ -22,7 +22,7 @@ jobs:
             ls
             dir
   use-file:
-    needs: build
+    needs: create-file
     runs-on: ubuntu-latest
     steps:
       - name: Get artifacts
