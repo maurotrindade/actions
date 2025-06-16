@@ -18,5 +18,10 @@ jobs:
     needs: tests
     runs-on: ubuntu-latest
     steps:
+      - name: Use Cache Dependencies
+        uses: actions/cache@v4
+        with:
+            path: ~/.npm
+            key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Cow say
         run: npx cowsay Moo!
