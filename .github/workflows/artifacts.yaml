@@ -10,7 +10,7 @@ jobs:
         run: ls -lah > ls
       - name: Create create release file
         run: |
-            makedir dir
+            mkdir dir
             cat /etc/*-release > dir/release
       - name: Upload Artifacts
         # vai criar um link de download (vou usar o artifacts do hub como área de transfência)
