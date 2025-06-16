@@ -11,9 +11,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: node-modules-3
-      - name: Cow say
-        run: npx cowsay "Hello from step 1!""
+          key: node-modules-4
+      - name: Install
+        run: npm i cowsay -g
   use:
     needs: install
     runs-on: ubuntu-latest
@@ -23,6 +23,6 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: node-modules-3
+          key: node-modules-4
       - name: Cow say
         run: npx cowsay Moo!
