@@ -3,7 +3,7 @@ name: Error
 on: workflow_dispatch
 
 jobs:
-  pr:
+  error:
     runs-on: ubuntu-latest
     steps:
       - name: Pass

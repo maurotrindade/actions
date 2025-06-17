@@ -30,6 +30,7 @@ jobs:
         run: echo "Hello GitHubActions!"
 ```
 
-[conceitos básicos](docs/1%20-%20conceitos%20básicos)
+## 
 
-[actions](docs/2%20-%20actions.md)
+1. [Conceitos básicos](docs/1%20-%20conceitos%20básicos)
+1. [Actions](docs/2%20-%20actions.md)
