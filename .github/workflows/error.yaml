@@ -10,3 +10,5 @@ jobs:
         run: exit 0
       - name: Everything is fine
         run: exit 1
+      - name: I never run
+        run: echo "I realy never run"
