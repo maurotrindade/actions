@@ -1,0 +1,12 @@
+name: Error
+
+on: workflow_dispatch
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pass
+        run: exit 0
+      - name: Everything is fine
+        run: exit 1

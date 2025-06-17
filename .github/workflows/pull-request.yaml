@@ -3,7 +3,7 @@ name: Pull Requests
 on:
   # PRs vindos de forks não vão rodar por padrão pedindo antes uma aprovação
   pull_request:
-    branches: [main]
+    branches: [workflow_dispatch]
 
 jobs:
   pr:
