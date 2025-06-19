@@ -28,9 +28,9 @@ jobs:
   runs-if-failed:
     # vai rodar se error falhar
     runs-on: ubuntu-latest
-    if: steps.erroed-step.conclusion == 'failure'
+    if: steps.erroed-step.outcome == 'failure'
     # .outputs .outcome .conclusion
-    # .conclusion: 'success' | 'failure' | 'cancelled' | 'skiped'
+    # .outcome: 'success' | 'failure' | 'cancelled' | 'skiped'
     steps:
       - name: Pass
         run: echo "Hello there!"
