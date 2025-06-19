@@ -6,9 +6,12 @@ jobs:
   conditions:
     runs-on: ubuntu-latest
     steps:
-      - name: conditions
+      - name: if 0
         if: 0
         run: echo "0!"
-      - name: conditions
+      - name: if 1
         if: 1
+        run: echo "1!"
+      - name: if 1
+        if: true
         run: echo "1!"
