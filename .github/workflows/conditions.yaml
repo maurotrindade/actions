@@ -15,7 +15,7 @@ jobs:
         run: echo "1!"
       - name: if true
         if: true
-        run: echo "true!"
+        run: echo "true!" && sleep 2
   on-failure:
     needs: conditions  # sem isso nunca seria executado
     if: failure()
