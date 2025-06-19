@@ -10,10 +10,11 @@ jobs:
         id: node-modules  
         uses: actions/cache@v4
         with:
-          path: ~/.npm
-          key: node-modules-4
-      - name: Install
-        run: npm i cowsay -g
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependenceies
+        if: steps.node-modules.cache-hit != 'true'
+        run: npm ci
   use:
     needs: install
     runs-on: ubuntu-latest
@@ -22,7 +23,7 @@ jobs:
         id: node-modules  
         uses: actions/cache@v4
         with:
-          path: ~/.npm
-          key: node-modules-4
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Cow say
         run: npx cowsay Moo!

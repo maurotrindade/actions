@@ -21,7 +21,7 @@ jobs:
       - name: Cache Dependencies
         uses: actions/cache@v4
         with:
-          path: ~/.npm
+          path: ~/.npm  # ou o node_modules local...
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install
         run: npm ci  # use only .lock
