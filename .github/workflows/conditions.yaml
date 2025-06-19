@@ -18,6 +18,7 @@ jobs:
         run: echo "true!"
   on-failure:
     if: failure()
+    runs-on: ubuntu-latest
     steps:
       - name: Deu ruim
         run echo "Deu ruim!"
