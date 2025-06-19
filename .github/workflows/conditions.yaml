@@ -17,6 +17,7 @@ jobs:
         if: true
         run: echo "true!"
   on-failure:
+    needs: conditions  # sem isso nunca seria executado
     if: failure()
     runs-on: ubuntu-latest
     steps:
