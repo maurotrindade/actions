@@ -23,3 +23,24 @@ jobs:
     steps:
       - name: Deu ruim
         run: echo "Deu ruim!"
+  on-success:
+    needs: conditions  # sem isso nunca seria executado
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Foi tudo bem
+        run: echo "Deu bão!"
+    on-cancelled:
+    needs: conditions  # sem isso nunca seria executado
+    if: cancelled()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Foi cancelado
+        run: echo "Foi cancelado!"
+    always:
+    needs: conditions  # sem isso nunca seria executado
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sempre
+        run: echo "Sempre!"
