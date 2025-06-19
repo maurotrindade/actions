@@ -5,9 +5,9 @@ on: workflow_dispatch
 jobs:
   error:
     runs-on: ubuntu-latest
-    id: erroed-step  # para ser referenciado no if
     steps:
       - name: Pass
+        id: erroed-step  # para ser referenciado no if
         run: exit 0
       - name: Everything is fine
         run: exit 1
