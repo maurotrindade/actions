@@ -12,3 +12,16 @@ jobs:
         run: exit 1
       - name: I never run
         run: echo "I realy never run"
+  canceled:
+    needs: error  # depende de error, será cancelado
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pass
+        run: echo "I will never run"
+  error:
+    # não tem relação com erro, vai ser executado normalmente
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pass
+        run: echo "Hello there!"
+
