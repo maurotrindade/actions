@@ -5,6 +5,7 @@ on: workflow_dispatch
 jobs:
   error:
     runs-on: ubuntu-latest
+    id: erroed-step  # para ser referenciado no if
     steps:
       - name: Pass
         run: exit 0
@@ -21,6 +22,15 @@ jobs:
   runs:
     # não tem relação com erro, vai ser executado normalmente
     runs-on: ubuntu-latest
+    steps:
+      - name: Pass
+        run: echo "Hello there!"
+  runs-if-failed:
+    # vai rodar se error falhar
+    runs-on: ubuntu-latest
+    if: steps.erroed-step.conclusion == 'failure'
+    # .outputs .outcome .conclusion
+    # .conclusion: 'success' | 'failure' | 'cancelled' | 'skiped'
     steps:
       - name: Pass
         run: echo "Hello there!"
