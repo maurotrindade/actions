@@ -4,9 +4,10 @@ on: workflow_dispatch
 
 jobs:
   conditions:
+    if: true
     runs-on: ubuntu-latest
     steps:
-      - name: if 0
+      - name: if 0  # <- step condition
         if: 0
         run: echo "0!"
       - name: if 1
@@ -15,3 +16,8 @@ jobs:
       - name: if true
         if: true
         run: echo "true!"
+  on-failure:
+    if: failure()
+    steps:
+      - name: Deu ruim
+        run echo "Deu ruim!"
