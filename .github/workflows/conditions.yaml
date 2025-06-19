@@ -1,0 +1,14 @@
+name: Conditions
+
+on: workflow_dispatch
+
+jobs:
+  conditions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: conditions
+        if: 0
+        run: echo "0!"
+      - name: conditions
+        if: 1
+        run: echo "1!"
