@@ -3,28 +3,28 @@ Use ssh keys and define host aliases in ssh config file (each alias for an accou
 
 2. Edit/Create ssh config file (`~/.ssh/config`):
 
-   ```conf
-   # Default github account: oanhnn
-   Host github.com
-      HostName github.com
-      IdentityFile ~/.ssh/oanhnn_private_key
-      IdentitiesOnly yes
-      
-   # Other github account: superman
-   Host github-superman
-      HostName github.com
-      IdentityFile ~/.ssh/superman_private_key
-      IdentitiesOnly yes
-   ```
+```conf
+# Default github account: oanhnn
+Host github.com
+   HostName github.com
+   IdentityFile ~/.ssh/oanhnn_private_key
+   IdentitiesOnly yes
+   
+# Other github account: superman
+Host github-superman
+   HostName github.com
+   IdentityFile ~/.ssh/superman_private_key
+   IdentitiesOnly yes
+```
    
    > NOTE: If you use any account frequently, you should use the default hostname (`github.com`).
    
 3. [Add ssh private keys to your agent](https://help.github.com/articles/adding-a-new-ssh-key-to-the-ssh-agent/):
 
-   ```shell
-   $ ssh-add ~/.ssh/oanhnn_private_key
-   $ ssh-add ~/.ssh/superman_private_key
-   ```
+```shell
+ssh-add ~/.ssh/oanhnn_private_key
+ssh-add ~/.ssh/superman_private_key
+```
 
 4. Test your connection
 
