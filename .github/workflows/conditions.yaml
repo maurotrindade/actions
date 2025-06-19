@@ -30,14 +30,14 @@ jobs:
     steps:
       - name: Foi tudo bem
         run: echo "Deu bão!"
-    on-cancelled:
+  on-cancelled:
     needs: conditions  # sem isso nunca seria executado
     if: cancelled()
     runs-on: ubuntu-latest
     steps:
       - name: Foi cancelado
         run: echo "Foi cancelado!"
-    always:
+  always:
     needs: conditions  # sem isso nunca seria executado
     if: always()
     runs-on: ubuntu-latest
