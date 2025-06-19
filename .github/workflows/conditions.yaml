@@ -38,7 +38,7 @@ jobs:
       - name: Foi cancelado
         run: echo "Foi cancelado!"
   finally:
-    needs: [on-failure, on-sucess, on-cacelled:]
+    needs: [on-failure, on-success, on-cancelled]
     if: always()
     runs-on: ubuntu-latest
     steps:
