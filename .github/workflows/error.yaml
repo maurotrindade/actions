@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Pass
         run: echo "I will never run"
-  error:
+  runs:
     # não tem relação com erro, vai ser executado normalmente
     runs-on: ubuntu-latest
     steps:
