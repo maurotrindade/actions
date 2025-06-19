@@ -21,4 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deu ruim
-        run echo "Deu ruim!"
+        run: echo "Deu ruim!"
