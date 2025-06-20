@@ -9,6 +9,14 @@ jobs:
       matrix:
         names: [primus, secundos, tercius]
         os: [ubuntu-latest, windows-latest, macos-latest]
+        # posso incluir combinações:
+        include:
+          - names: included
+            os: ubuntu-latest
+        # posso excluir combinações da matriz:
+        exclude:
+          - names: tercius
+            os: windows-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: hello-step
