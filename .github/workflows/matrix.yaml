@@ -12,4 +12,4 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: hello-step
-        run: echo "${{ matrix.name }}""
+        run: echo "${{ matrix.name }}"
