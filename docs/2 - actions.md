@@ -3,8 +3,8 @@
 - a "custom command";
 - an application that performs a task (more complex than a command)
 
-Actions = GitHub Actions
-actions = custom command
+1. **Actions** = GitHub Actions
+2. **actions** = custom command
 
 ![run x use](../assets/actions.png)
 

@@ -1,22 +1,25 @@
 # Conceitos
 
+![jobs](<../assets/Screenshot from 2025-06-13 13-51-11.png>)
+
 ## Workflows
 
-fica em um dado repositório onde é disparado por eventos
-contêm um ou mais `jobs`
+- ficam em um dado repositório onde são disparados por eventos
+- contêm um ou mais `jobs`
 
 ## Jobs
 
-contêm um ou mais steps
-rodam em paralelo por padrão
-sempre tem que definir um `runner`
-
-Runner -> every job gets its own runner
+- contêm um ou mais steps
+- rodam em paralelo por padrão
+- cada um tem seu próprio `runner`
+- podem ser condicionais
 
 ## Steps
 
-
-![jobs](<../assets/Screenshot from 2025-06-13 13-51-11.png>)
+- executam shell script (`run`)
+- podem ser actions (`uses`)
+- são executados em órdem
+- podem ser condicionais
 
 ## sintaxe básica:
 

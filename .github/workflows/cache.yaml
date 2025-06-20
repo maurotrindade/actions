@@ -29,8 +29,5 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
-      # - name: Install dependenceies
-      #   if: steps.node-modules.cache-hit != 'true'
-      #   run: npm ci
       - name: Cow say
         run: npx cowsay Moo!
