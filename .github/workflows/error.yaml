@@ -24,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Everything is fine
+        continue-on-error: true
         run: exit 1
       - name: Continue on error
-        continue-on-error: true
         run: echo "Continue on error"
   runs-if-failed:
     # vai rodar se error falhar
