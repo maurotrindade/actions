@@ -37,4 +37,3 @@ jobs:
       - name: Pass
         if: failure() && steps.erroed-step.outcome == 'failure'
         run: echo "Hello there!"
-
