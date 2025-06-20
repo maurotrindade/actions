@@ -4,7 +4,6 @@ on: workflow_dispatch
 
 jobs:
   matrix:
-    continue-on-error: true
     strategy:
       matrix:
         names: [primus, secundos, tercius]

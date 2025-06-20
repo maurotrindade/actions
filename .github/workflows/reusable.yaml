@@ -1,0 +1,11 @@
+name: Reusable Workflow
+
+# o evento é ser chamado por outro workflow
+on: workflow_call
+
+jobs:
+  reusable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reusable Workflow
+        run: echo "Reusable Workflow"
