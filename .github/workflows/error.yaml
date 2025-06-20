@@ -13,9 +13,6 @@ jobs:
         run: exit 1
       - name: I never run
         run: echo "I realy never run"
-      - name: Continue on error
-        continue-on-error: true
-        run: echo "I realy never run"
   canceled:
     needs: error  # depende de error, será cancelado
     runs-on: ubuntu-latest
@@ -26,8 +23,11 @@ jobs:
     # não tem relação com erro, vai ser executado normalmente
     runs-on: ubuntu-latest
     steps:
-      - name: Pass
-        run: echo "Hello there!"
+      - name: Everything is fine
+        run: exit 1
+      - name: Continue on error
+        continue-on-error: true
+        run: echo "Continue on error"
   runs-if-failed:
     # vai rodar se error falhar
     runs-on: ubuntu-latest
