@@ -6,7 +6,6 @@ on:
       name:
         description: A result returned
         value: ${{ jobs.publisher.outputs.outcome }}
-        type: string
 
 jobs:
   reusable:
