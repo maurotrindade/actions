@@ -14,4 +14,4 @@ jobs:
     with:
       name: GitHub Actions
     secrets:
-      my-secret: ${{ secret.REPOSITORY_SECRET }}
+      my-secret: ${{ secrets.REPOSITORY_SECRET }}
