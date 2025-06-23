@@ -1,4 +1,7 @@
 name: Hello Actions
+# name é opcional
+# - se não existe vai ser o nome do arquivos
+# - se repetido vai aparecer duas vzs no menu (nome do arquivo diferencia)
 
 on:
   push:
