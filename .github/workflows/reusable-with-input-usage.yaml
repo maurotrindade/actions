@@ -1,0 +1,15 @@
+name: Using Reusable Workflow
+
+on: workflow_dispatch
+
+jobs:
+  primus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Using Reusable Workflow
+        run: echo "Using Reusable Workflow"
+  secundos:
+    needs: primus
+    uses: ./.github/workflows/reusable-with-inputs.yaml
+    with:
+      name: GitHub Actions

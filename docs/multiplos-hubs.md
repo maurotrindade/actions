@@ -17,8 +17,6 @@ Host github-superman
    IdentitiesOnly yes
 ```
    
-   > NOTE: If you use any account frequently, you should use the default hostname (`github.com`).
-   
 3. [Add ssh private keys to your agent](https://help.github.com/articles/adding-a-new-ssh-key-to-the-ssh-agent/):
 
 ```shell
