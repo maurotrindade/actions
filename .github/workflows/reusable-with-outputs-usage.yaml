@@ -4,9 +4,14 @@ on: workflow_dispatch
 
 jobs:
   primus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Using Reusable Workflow
+        run: echo "The workflow must contain at least one job with no dependencies"
+  secundos:
     needs: primus
     uses: ./.github/workflows/reusable-with-outputs.yaml
-  secundos:
+  tertius:
     needs: primus
     runs-on: ubuntu-latest
     steps:
