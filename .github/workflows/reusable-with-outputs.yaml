@@ -1,0 +1,20 @@
+name: Reusable Workflow with Outputs
+
+on:
+  workflow_call:
+    outputs:
+      name:
+        description: A result returned
+        value: ${{ jobs.publisher.outputs.outcome }}
+        type: string
+
+jobs:
+  reusable:
+    outputs:
+      # preciso primeiro setar para o job:
+      outcome: ${{ steps.publisher.outputs.result.value }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ser result output
+        id: result
+        run: echo "value=$RANDOM" >> $GITHUB_OUTPUT
