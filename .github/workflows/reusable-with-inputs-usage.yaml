@@ -13,3 +13,5 @@ jobs:
     uses: ./.github/workflows/reusable-with-inputs.yaml
     with:
       name: GitHub Actions
+    secrets:
+      my-secret: ${{ secret.REPOSITORY_SECRET }}

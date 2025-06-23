@@ -1,6 +1,5 @@
 name: Reusable Workflow with Inputs
 
-# 
 on:
   workflow_call:
     inputs:
@@ -13,6 +12,9 @@ on:
         required: false
         default: 42
         type: number
+    secrets:
+      my-secret:
+        required: true
 
 jobs:
   reusable:
@@ -22,3 +24,5 @@ jobs:
         run: echo ${{ inputs.name }}
       - name: Print number
         run: echo ${{ inputs.number }}
+      - name: Print secret
+        run: echo ${{ secrets.my-secret }}

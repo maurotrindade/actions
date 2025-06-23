@@ -24,6 +24,9 @@
 ## sintaxe básica:
 
 ```yaml
+# name é opcional
+# - se não existe vai ser o nome do arquivo;
+# - se repetido vai aparecer duas vzs no menu (nome do arquivo diferencía);
 name: nome-opcional-do-workflow
 
 on: event  # evento que dispara o workflow

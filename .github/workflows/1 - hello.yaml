@@ -1,7 +1,7 @@
-name: Hello Actions
 # name é opcional
-# - se não existe vai ser o nome do arquivos
-# - se repetido vai aparecer duas vzs no menu (nome do arquivo diferencia)
+# - se não existe vai ser o nome do arquivo;
+# - se repetido vai aparecer duas vzs no menu (nome do arquivo diferencía);
+name: Hello Actions
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello Ubuntu
-        # já vem com diversas linguagens instaladas
+        # já vem com diversas linguagens instaladas (muda com OS)
         run: |
           cat /etc/*-release && echo "\n"
           echo "Node: " && node --version
@@ -21,7 +21,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Hello Windows
-        # já vem com diversas linguagens instaladas
         run: |
           Write-Host "Versão do Windows:"
           Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion, OsArchitecture
@@ -31,7 +30,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Hello MacOS
-        # já vem com diversas linguagens instaladas
         run: |
           sw_vers
           echo "Node: " && node --version

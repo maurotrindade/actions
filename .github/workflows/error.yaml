@@ -34,6 +34,6 @@ jobs:
     # .outputs .outcome .conclusion
     # .outcome: 'success' | 'failure' | 'cancelled' | 'skiped'
     steps:
-      - name: Pass
+      - name: Run if failed
         if: failure() && steps.erroed-step.outcome == 'failure'
         run: echo "Hello there!"
