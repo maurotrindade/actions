@@ -3,9 +3,25 @@ name: Hello Containers
 on: workflow_dispatch
 
 jobs:
-  container:
+  opensuse:
     runs-on: ubuntu-latest
     container: opensuse/leap # <- só isso que mudar
     steps:
-      - name: Hello openSUSE
+      - name: Hello openSUSE # já estou no container
         run: cat /etc/*-release
+  alpine:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine # até aqui seria o mesmo
+    #   env:        # mas agora posso adc configs
+    steps:
+      - name: Hello Alpine
+        run: cat /etc/*-release
+#   images:
+#     runs-on: ubuntu-latest
+#     container:
+#       image: opensuse/leap # até aqui seria o mesmo
+#       env:                 # mas agora posso adc configs
+#     steps:
+#       - name: Hello openSUSE
+#         run: cat /etc/*-release
