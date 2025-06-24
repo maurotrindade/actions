@@ -1,0 +1,11 @@
+name: Hello Containers
+
+on: workflow_dispatch
+
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    container: opensuse/leap # <- só isso que mudar
+    steps:
+      - name: Hello openSUSE
+        run: cat /etc/*-release
