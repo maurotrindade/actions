@@ -1,4 +1,4 @@
-name: Hello Containers
+name: Hello Services
 
 on: workflow_dispatch
 
