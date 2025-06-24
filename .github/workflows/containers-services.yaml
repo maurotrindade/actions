@@ -1,0 +1,30 @@
+name: Hello Containers
+
+on: workflow_dispatch
+
+jobs:
+  alpine:
+    runs-on: ubuntu-latest
+    services:
+      # se sozinho vai ficar no localhost
+      mongodb:
+        image: mongo
+        env:
+          MONGO_INITDB_ROOT_USERNAME: root
+          MONGO_INITDB_ROOT_PASSWORD: psw
+    steps:
+      - name: Ping localhost
+        run: ping -c 4 -w 10 127.0.0.1:27017
+  alpine-2:
+    runs-on: ubuntu-latest
+    container: opensuse/leap # se exist um container junto
+    services:
+      # vai criar uma rede local e posso referênciar como mongodb
+      mongodb:
+        image: mongo
+        env:
+          MONGO_INITDB_ROOT_USERNAME: root
+          MONGO_INITDB_ROOT_PASSWORD: psw
+    steps:
+      - name: Ping mongodb
+        run: ping -c 4 -w 10 mongodb

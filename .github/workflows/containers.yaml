@@ -17,11 +17,3 @@ jobs:
     steps:
       - name: Hello Alpine
         run: cat /etc/*-release
-#   images:
-#     runs-on: ubuntu-latest
-#     container:
-#       image: opensuse/leap # até aqui seria o mesmo
-#       env:                 # mas agora posso adc configs
-#     steps:
-#       - name: Hello openSUSE
-#         run: cat /etc/*-release
